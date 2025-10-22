@@ -68,6 +68,8 @@ function countMealsByCategory (meals) {
     return counts;
 }
 
+// VG DEL
+// Listan sorteras efter nyckeln strCategory resultatet (output) blir ett objekt där varje nycklel innehåller en array av måltider i den katagorin.
 function groupBy(items, key) {
     return items.reduce((acc, item) => {
         const k = item[key] || 'Unknown';
@@ -76,6 +78,15 @@ function groupBy(items, key) {
         return acc;
     }, {});
 }
+
+
+// VG 2
+// Varje måltid sammanfattas i ett objekt och vi plockar ut information om bland annat
+//              id: m.idMeal,
+//             name: m.strMeal,
+//             category: m.strCategory,
+//             area: m.strArea,
+//             ingredients
 
 function mapMealsToSummary(meals) {
     return meals.map(m => {
@@ -94,6 +105,9 @@ function mapMealsToSummary(meals) {
     });
 }
 
+// VG 3
+// flatMap() hämtar alla ingredienser från varje måltid och slår ihop dem till en lista.
+// reduce() räknar hur ofta varje ingrediens förekommer.
 function countIngredientsFrequency(meals) {
     const allIngredients = meals.flatMap(m => {
         const ings = [];
