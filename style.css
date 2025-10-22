@@ -1,0 +1,17 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items:  center ;
+    flex-direction: column;
+    height: 100vh;
+
+h1{
+    font-size: 32px;
+    text-align: center;
+    color: darkolivegreen;
+}
+p {
+    font-size: 24px;
+    text-align: center;
+}
+
